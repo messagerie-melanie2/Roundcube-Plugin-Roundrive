@@ -24,21 +24,21 @@ class GetWithMetadata extends AbstractPlugin
      *
      * @throws InvalidArgumentException
      *
-     * @return array metadata
+     * @return array|false metadata
      */
     public function handle($path, array $metadata)
     {
         $object = $this->filesystem->getMetadata($path);
 
-        if (! $object) {
+        if ( ! $object) {
             return false;
         }
 
         $keys = array_diff($metadata, array_keys($object));
 
         foreach ($keys as $key) {
-            if (! method_exists($this->filesystem, $method = 'get'.ucfirst($key))) {
-                throw new InvalidArgumentException('Could not fetch metadata: '.$key);
+            if ( ! method_exists($this->filesystem, $method = 'get' . ucfirst($key))) {
+                throw new InvalidArgumentException('Could not fetch metadata: ' . $key);
             }
 
             $object[$key] = $this->filesystem->{$method}($path);

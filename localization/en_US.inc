@@ -27,13 +27,13 @@
 
 $labels['files'] = 'Files';
 $labels['filepreview'] = 'File preview';
-$labels['saveall'] = 'Save all to cloud...';
-$labels['saveto'] = 'Save to cloud...';
+$labels['saveall'] = 'Save all to Cloud';
+$labels['saveto'] = 'Save to Cloud';
 $labels['saveas'] = 'Save as:';
 $labels['create'] = 'Create';
 $labels['save'] = 'Save';
 $labels['cancel'] = 'Cancel';
-$labels['fromcloud'] = 'From cloud...';
+$labels['fromcloud'] = 'From Cloud';
 $labels['selectfiles'] = 'Select file(s) to attach...';
 $labels['attachsel'] = 'Attach selected';
 $labels['foldercreate'] = 'Create folder';
@@ -72,7 +72,7 @@ $labels['folderupdatenotice'] = 'Folder updated successfully.';
 $labels['foldercreatenotice'] = 'Folder created successfully.';
 $labels['saveallnotice'] = 'Successfully saved $n file(s).';
 $labels['saveallerror'] = 'Saving $n file(s) failed.';
-$labels['attacherror'] = 'Failed to attach file(s) from the cloud';
+$labels['attacherror'] = 'Failed to attach file(s) from Cloud';
 $labels['fileupdating'] = 'Updating file...';
 $labels['filemoving'] = 'Moving file(s)...';
 $labels['filecopying'] = 'Copying file(s)...';
