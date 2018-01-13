@@ -1170,7 +1170,7 @@ function roundrive_ui()
     });
 
     // add virtual collections
-    $.each(collections, function(i, n) {
+/*    $.each(collections, function(i, n) {
       var row = $('<li class="mailbox collection ' + n + '"></li>');
 
       row.attr({id: 'folder-collection-' + n, tabindex: 0})
@@ -1179,7 +1179,7 @@ function roundrive_ui()
 
       list.append(row);
     });
-
+*/
     // select first folder?
     if (this.env.folder)
       this.folder_select(this.env.folder);
