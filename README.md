@@ -1,27 +1,25 @@
-# Roundcube-Plugin-Roundrive
+# Roundav
 
-This plugin is largely inspired by the plugin kolab_file
-It can be used to connect on a WebDAV storage (like ownCloud) from Roundcube
-You can add file from/to a mail on/from your storage
+This plugin is a fork of [Roundcube-Plugin-Roundrive](https://github.com/messagerie-melanie2/Roundcube-Plugin-Roundrive), itself “largely inspired by the plugin kolab_file”.
 
-This plugin use the flysystem lib (https://github.com/thephpleague/flysystem)
-It can be modify to use other storages like local storage, amazon, google, ...
-
-This is an alpha version, don't use it in production unless you are absolutely sure of what you do
+It can be used to connect to a WebDAV storage (like Nextcloud) from Roundcube to save attachments to the WebDAV storage or insert attachments from it...
 
 License
 -------
 
-This plugin is released under the GNU Affero General Public License Version 3 (licence of kolab_file plugin)
-(http://www.gnu.org/licenses/agpl-3.0.html).
+This plugin is released under the [GNU Affero General Public License Version 3](https://www.gnu.org/licenses/agpl-3.0.html).
+
+Credits
+-------
+
+The "create a subdirectory" folder icon is ["Folder Plus"](https://www.svgrepo.com/svg/532824/folder-plus) from SVG Repo.
 
 Install
 -------
 
-* Place this plugin folder into plugins directory of Roundcube
-* Add roundrive to $config['plugins'] in your Roundcube config
+Requires Roundcube **1.7.0** or later (it relies on `rcube::insert_uploaded_file()`, added in 1.7).
+Installing through Composer enforces this automatically; copying the folder by hand does not.
 
-NB: When downloading the plugin from GitHub you will need to create a
-directory called roundrive and place the files in there,
-ignoring the root directory in the downloaded archive directory in the
-downloaded archive. 
+1. Place this plugin folder into plugins directory of Roundcube.
+1. Run `composer install --no-dev` inside this folder.
+1. Add `roundav` to `$config['plugins']` in your Roundcube config.

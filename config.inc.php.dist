@@ -1,9 +1,25 @@
 <?php
-// Show the drive task ?
-$rcmail_config['show_drive_task'] = true;
+// All settings below are optional.
+// Users can configure the WebDAV connection themselves via Settings > Cloud Storage.
+// Values set here act as server-wide defaults and can be locked by adding the key
+// to the 'dont_override' list in Roundcube's main config.inc.php, e.g.:
+//   $config['dont_override'] = ['driver_webdav_url', 'driver_webdav_prefix'];
 
-// Configuration WebDAV
-$rcmail_config['driver_webdav_url'] = 'http://url_to_your_webdav/prefix/file.php/webdav/';
+// WebDAV server base URL (e.g. https://cloud.example.com/remote.php/dav/files/USERNAME/).
+// Leave unset to require users to configure it themselves.
+$config['driver_webdav_url'] = null;
 
-// Prefix ex for owncloud : /remote.php/webdav/
-$rcmail_config['driver_webdav_prefix'] = '/prefix/file.php/webdav/';
+// WebDAV path prefix (e.g. /remote.php/dav/files/USERNAME/).
+$config['driver_webdav_prefix'] = null;
+
+// Override the username provided by Roundcube. Leave null to use the user's login name.
+$config['driver_webdav_username'] = null;
+
+// Override the password provided by Roundcube. Leave null to use the user's login password.
+$config['driver_webdav_password'] = null;
+
+// Override the HTTP version used by curl. See https://www.php.net/manual/en/curl.constants.php
+// Useful when the WebDAV server or a proxy in front of it misbehaves over HTTP/2.
+// Leave null to let curl negotiate.
+$config['driver_curl_http_version'] = null;
+// $config['driver_curl_http_version'] = CURL_HTTP_VERSION_1_1;

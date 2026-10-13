@@ -1,0 +1,33 @@
+<div id="files-dialog" class="uidialog" data-editable="true" role="dialog" aria-labelledby="aria-label-filesavedialog" aria-hidden="true">
+    <h3 id="aria-label-filesavedialog" class="voice"><roundcube:label name="roundav.arialabelfilesavedialog" /></h3>
+    <div id="file-save-as">
+        <label for="file-save-as-input"><roundcube:label name="roundav.saveas" /></label>
+        <input id="file-save-as-input" type="text" value="">
+    </div>
+    <div id="folderlistbox" class="uibox listbox" role="navigation" aria-labelledby="aria-label-folderlist">
+        <h3 id="aria-label-folderlist" class="voice">
+            <roundcube:label name="roundav.arialabelfolderlist" />
+        </h3>
+        <div id="files-folder-list" class="scroller withfooter">
+            <p class="loading">
+                <span>Loading folders…</span>
+            </p>
+        </div>
+        <div class="files-folder-list-actions" class="boxfooter">
+            <roundcube:button
+                command="folder-force-reload" name="refreshfolderslist" id="refreshfolderslist" type="link"
+                label="roundav.refreshfolderslist" title="roundav.refreshfolderslist" class="listbutton refresh" classAct="listbutton refresh"
+            />
+        </div>
+    </div>
+</div>
+
+<div id="files-folder-create-dialog" role="dialog" aria-labelledby="aria-label-foldercreateform" aria-hidden="true">
+    <h3 id="aria-label-foldercreateform" class="voice"><roundcube:label name="roundav.arialabelfoldercreateform" /></h3>
+    <roundcube:object name="folder-create-form" />
+</div>
+
+<div id="files-folder-auth-dialog" role="dialog" aria-labelledby="aria-label-folderauthform" aria-hidden="true">
+    <h3 id="aria-label-folderauthform" class="voice"><roundcube:label name="roundav.arialabelfolderauthform" /></h3>
+    <roundcube:object name="folder-auth-options">
+</div>
